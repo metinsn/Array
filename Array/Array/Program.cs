@@ -10,6 +10,8 @@ namespace Array
     {
         static void Main(string[] args)
         {
+            #region arrayornek
+
             //int[] dizi = new int[3];
             //for (int i = 0; i < dizi.Length; i++)
             //{
@@ -24,22 +26,68 @@ namespace Array
             //}
             //Console.ReadKey();
 
-            Console.Write("ınıf Mevcıdunu Girin : ");
-            int mevcut = Convert.ToInt32(Console.ReadLine());
-            string[] ogrenciler = new string[mevcut];
 
-            for (int i = 0; i < ogrenciler.Length; i++)
+            #endregion
+
+            #region arrayornek
+
+            //Console.Write("ınıf Mevcıdunu Girin : ");
+            //int mevcut = Convert.ToInt32(Console.ReadLine());
+            //string[] ogrenciler = new string[mevcut];
+
+            //for (int i = 0; i < ogrenciler.Length; i++)
+            //{
+            //    Console.Write("{0}.Öğrenci ismini giriniz:",i);
+            //    ogrenciler[i] = Console.ReadLine();
+            //}
+            //Console.Clear();
+            //Console.WriteLine("Ögrenci Listesi\n");
+            //foreach(var item in ogrenciler)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //Console.ReadKey();
+
+            #endregion
+
+
+            #region Sayıyazdir
+            Random rnd = new Random();
+            int eksi = 0, arti = 0, sifir = 0;
+            int[] numbers = new int[10];
+
+            for (int i = 0; i < numbers.Length; i++)
             {
-                Console.Write("{0}.Öğrenci ismini giriniz:",i);
-                ogrenciler[i] = Console.ReadLine();
+                numbers[i] = rnd.Next(-100, 100);
             }
-            Console.Clear();
-            Console.WriteLine("Ögrenci Listesi\n");
-            foreach(var item in ogrenciler)
+            foreach (var sayi in numbers)
             {
-                Console.WriteLine(item);
+
+                Console.WriteLine(sayi);
+
+                if (sayi > 0)
+                {
+                    arti++;
+                }
+                else if (sayi < 0)
+                {
+                    eksi++;
+                }
+                else
+                {
+                    sifir++;
+                }
+
             }
+            Console.WriteLine();
+            Console.WriteLine("eksi " + eksi);
+            Console.WriteLine("artı " + arti);
+            Console.WriteLine("sıfır " + sifir);
             Console.ReadKey();
+
+            #endregion
+
+
         }
     }
 }
