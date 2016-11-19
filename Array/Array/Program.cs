@@ -15,6 +15,14 @@ namespace Array
             {
                 array[i] = i;
             }
+
+            for (int i = 0; i < array.Length; i++)
+            {
+
+                Console.WriteLine(array[i]);
+                
+            }
+            Console.ReadKey();
         }
     }
 }
