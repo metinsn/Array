@@ -31,7 +31,7 @@ namespace Array
 
             #region arrayornek
 
-            //Console.Write("ınıf Mevcıdunu Girin : ");
+            //Console.Write("Sınıf Mevcıdunu Girin : ");
             //int mevcut = Convert.ToInt32(Console.ReadLine());
             //string[] ogrenciler = new string[mevcut];
 
