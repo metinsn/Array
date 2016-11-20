@@ -88,35 +88,56 @@ namespace Array
 
             #region OrnekGunler
 
-            string[] gunler = new string[7] { "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar" };
+            //string[] gunler = new string[7] { "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar" };
 
-            bool devam = true;
-            while (devam)
+            //bool devam = true;
+            //while (devam)
+            //{
+            //    Console.WriteLine("Kaçıncı Gün :");
+            //    byte gun = Convert.ToByte(Console.ReadLine());
+            //    if (gun <= 7 && gun >= 1)
+            //    {
+            //        Console.WriteLine(gunler[gun - 1]);
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Haftada 7 gün vardır.");
+            //    }
+
+            //    Console.WriteLine("Devam Etmek istiyorsan \"e\" tusuna bas");
+            //    char c = Convert.ToChar(Console.ReadLine());
+            //    if (c == 'e')
+            //    {
+            //        devam = true;
+            //        Console.Clear();
+
+            //    }
+            //    else
+            //    {
+            //        devam = false;
+            //    }
+            //}
+
+            #endregion
+
+            #region 2boyutludizi
+            int[,] sinavlar = new int[2, 3];
+            sinavlar[0, 0] = 1;
+            sinavlar[1, 0] = 20;
+            sinavlar[0, 1] = 2;
+            sinavlar[1, 1] = 30;
+            sinavlar[0, 2] = 3;
+            sinavlar[1, 2] = 40;
+            for (int i = 0; i < 3; i++)
             {
-                Console.WriteLine("Kaçıncı Gün :");
-                byte gun = Convert.ToByte(Console.ReadLine());
-                if (gun <= 7 && gun >= 1)
-                {
-                    Console.WriteLine(gunler[gun - 1]);
-                }
-                else
-                {
-                    Console.WriteLine("Haftada 7 gün vardır.");
-                }
-
-                Console.WriteLine("Devam Etmek istiyorsan \"e\" tusuna bas");
-                char c = Convert.ToChar(Console.ReadLine());
-                if (c == 'e')
-                {
-                    devam = true;
-                    Console.Clear();
-
-                }
-                else
-                {
-                    devam = false;
-                }
+                Console.WriteLine(sinavlar[0, i]+ "-" + sinavlar[1, i]);
             }
+
+            Console.ReadKey();
+
+
+
+
 
             #endregion
 
