@@ -8,8 +8,44 @@ namespace Array
 {
     class Program
     {
+
+        static int Bul(string _gun, string[] dizi)
+        {
+            int index = -1;
+
+            for (int i = 0; i < dizi.Length; i++)
+            {
+                if (dizi[i]==_gun)
+                {
+                    index = i;
+                }
+            }
+
+
+            return index;
+
+        }
+
         static void Main(string[] args)
         {
+
+            #region gundendizibulma
+
+            string[] gunler = new string[7] { "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar" };
+
+            Console.WriteLine("Hangi Gün :");
+
+            string gun = Convert.ToString(Console.ReadLine());
+
+            int gelenDeger = Bul(gun, gunler);
+
+
+            Console.WriteLine("{0} Haftanın {1}' inci günüdür.", gun, gelenDeger+1);
+
+            Console.ReadKey();
+
+            #endregion
+            
             #region arrayornek
 
             //int[] dizi = new int[3];
@@ -121,27 +157,23 @@ namespace Array
             #endregion
 
             #region 2boyutludizi
-            int[,] sinavlar = new int[2, 3];
-            sinavlar[0, 0] = 1;
-            sinavlar[1, 0] = 20;
-            sinavlar[0, 1] = 2;
-            sinavlar[1, 1] = 30;
-            sinavlar[0, 2] = 3;
-            sinavlar[1, 2] = 40;
-            for (int i = 0; i < 3; i++)
-            {
-                Console.WriteLine(sinavlar[0, i]+ "-" + sinavlar[1, i]);
-            }
 
-            Console.ReadKey();
+            //int[,] sinavlar = new int[2, 3];
+            //sinavlar[0, 0] = 1;
+            //sinavlar[1, 0] = 20;
+            //sinavlar[0, 1] = 2;
+            //sinavlar[1, 1] = 30;
+            //sinavlar[0, 2] = 3;
+            //sinavlar[1, 2] = 40;
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    Console.WriteLine(sinavlar[0, i]+ "-" + sinavlar[1, i]);
+            //}
 
-
-
-
+            //Console.ReadKey();
 
             #endregion
 
-
-        }
+                   }
     }
 }
