@@ -50,40 +50,73 @@ namespace Array
 
             #endregion
 
-
             #region Sayıyazdir
-            Random rnd = new Random();
-            int eksi = 0, arti = 0, sifir = 0;
-            int[] numbers = new int[10];
+            //Random rnd = new Random();
+            //int eksi = 0, arti = 0, sifir = 0;
+            //int[] numbers = new int[10];
 
-            for (int i = 0; i < numbers.Length; i++)
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    numbers[i] = rnd.Next(-1000, 1000);
+            //}
+            //foreach (var sayi in numbers)
+            //{
+
+            //    Console.WriteLine(sayi);
+
+            //    if (sayi > 0)
+            //    {
+            //        arti++;
+            //    }
+            //    else if (sayi < 0)
+            //    {
+            //        eksi++;
+            //    }
+            //    else
+            //    {
+            //        sifir++;
+            //    }
+
+            //}
+            //Console.WriteLine();
+            //Console.WriteLine("eksi " + eksi);
+            //Console.WriteLine("artı " + arti);
+            //Console.WriteLine("sıfır " + sifir);
+            //Console.ReadKey();
+
+            #endregion
+
+            #region OrnekGunler
+
+            string[] gunler = new string[7] { "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar" };
+
+            bool devam = true;
+            while (devam)
             {
-                numbers[i] = rnd.Next(-100, 100);
-            }
-            foreach (var sayi in numbers)
-            {
-
-                Console.WriteLine(sayi);
-
-                if (sayi > 0)
+                Console.WriteLine("Kaçıncı Gün :");
+                byte gun = Convert.ToByte(Console.ReadLine());
+                if (gun <= 7 && gun >= 1)
                 {
-                    arti++;
-                }
-                else if (sayi < 0)
-                {
-                    eksi++;
+                    Console.WriteLine(gunler[gun - 1]);
                 }
                 else
                 {
-                    sifir++;
+                    Console.WriteLine("Haftada 7 gün vardır.");
                 }
 
+                Console.WriteLine("Devam Etmek istiyorsan \"e\" tusuna bas");
+                char c = Convert.ToChar(Console.ReadLine());
+                if (c == 'e')
+                {
+                    devam = true;
+                    Console.Clear();
+
+                }
+                else
+                {
+                    devam = false;
+                }
             }
-            Console.WriteLine();
-            Console.WriteLine("eksi " + eksi);
-            Console.WriteLine("artı " + arti);
-            Console.WriteLine("sıfır " + sifir);
-            Console.ReadKey();
 
             #endregion
 
