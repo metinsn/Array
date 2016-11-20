@@ -15,7 +15,7 @@ namespace Array
 
             for (int i = 0; i < dizi.Length; i++)
             {
-                if (dizi[i]==_gun)
+                if (dizi[i] == _gun)
                 {
                     index = i;
                 }
@@ -38,14 +38,13 @@ namespace Array
             string gun = Convert.ToString(Console.ReadLine());
 
             int gelenDeger = Bul(gun, gunler);
-
-
-            Console.WriteLine("{0} Haftanın {1}' inci günüdür.", gun, gelenDeger+1);
+            
+            Console.WriteLine("{0} Haftanın {1}'. günüdür.", gun, gelenDeger + 1);
 
             Console.ReadKey();
 
             #endregion
-            
+
             #region arrayornek
 
             //int[] dizi = new int[3];
@@ -174,6 +173,8 @@ namespace Array
 
             #endregion
 
-                   }
+
+
+        }
     }
 }
